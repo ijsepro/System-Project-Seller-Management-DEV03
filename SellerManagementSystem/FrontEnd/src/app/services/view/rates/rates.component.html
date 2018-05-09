@@ -6,19 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="app/services/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./../dist/css/bootstrap.css">
+  <link rel="stylesheet" href="rates.component.scss">
 
   <!--Jquery & slideshow-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
-  <script src="environments/dist/js/jquery-3.2.1.js"></script>
-  <script src="js/script.js"></script>
+  <script src="../../jquery/jquery-3.2.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
-  <link rel="icon" type="image/png" href="img/g.png" />
-  <title>Welcome to Global Traders</title>
 
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <title>Global Traders | Accomodation</title>
 
+  <script>
 
+  </script>
 
 </head>
 
@@ -26,6 +26,7 @@
 
 
 <body>
+
 <!--Collapsible navbar for xs, sm, & md sizes only-->
 <div class="menubar hidden-lg" data-toggle="collapse" data-target=".dropdown">
   <h3>MENU</h3>
@@ -44,17 +45,19 @@
 </div>
 <!--end Collapsible navbar-->
 
+
 <div class="container-fluid">
 
   <div class="row">
 
     <!--start Logo div-->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 logo text-center">
+
       <p class="btn btn-primary right"><a href="login.php">Login</a></p>
       <img src="img/logo.png" width="100" height="auto" id="logo" alt="logo">
     </div>
     <!--end Logo div-->
-    <div class="clearfix"></div>
+
     <!--start Header div-->
     <div class="col-lg-12 hidden-md hidden-sm hidden-xs header text-center">
       <ul>
@@ -68,17 +71,48 @@
     </div>
     <!--end Header div-->
 
-    <!--start Slideshow div--><div class="team"></div>
-    <div class="col-lg-9 col-md-9 col-sm-12 hidden-xs slideshow cycle-slideshow">
-      <img src="img/1.jpg" alt="sliding image">
-      <img src="img/2.jpg" alt="sliding image">
-      <img src="img/3.jpg" alt="sliding image">
-      <img src="img/4.jpg" alt="sliding image">
+    <!--start rooms div-->
 
+
+    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 rooms">
+      <h1 class="text-center">Our packages</h1>
+      <div class="team roominfo">
+        <!--start rooms div--	<img src="img/standard.jpg" class="img-responsive" width="100%" alt="standard room image">-->
+        <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry </p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+
+      </div>
+
+      <div class="team roominfo">
+        <!--start rooms div--<img src="img/deluxe.jpg" class="img-responsive" width="100%" alt="deluxe room image">-->
+        <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+      </div>
+
+      <div class="team roominfo">
+        <!--start rooms div--<img src="img/luxury.jpg" class="img-responsive" width="100%" alt="luxury room image">-->
+        <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+      </div>
+
+      <div class="team roominfo">
+        <!--start rooms div--<img src="img/family.jpg" class="img-responsive" width="100%" alt="family room image">-->
+        <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+      </div>
 
     </div>
 
-    <!--end Slideshow div-->
+
+    <!--end rooms div-->
 
     <!--start Book div-->
     <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 book right">
@@ -124,15 +158,7 @@
         </tr>
         <tr>
           <td><br>
-            <!--<input type="submit" class="btn btn-primary" value="Submit">-->
-            <input type="button" class="btn btn-primary" value="Submit" onclick=" relocate_home()">
-
-            <script>
-              function relocate_home()
-              {
-                location.href = "trackinfo.html";
-              }
-            </script>
+            <input type="submit" class="btn btn-primary" value="Submit">
           </td>
         </tr>
         </form>
@@ -140,56 +166,8 @@
     </div>
     <!--end Book div-->
 
-
     <!--start intro div-->
-    <div class="col-lg-9 col-md-12 col-sm-7 col-xs-12 intro">
-      <div class="box cycle-slideshow" data-cycle-slides="> div" data-cycle-fx="scrollHorz" data-cycle-pause-on-hover="true">
-        <div class="intro1">
 
-          <div class="guestimg right hidden-md hidden-sm hidden-xs left"><img src="img/guest2.jpg" class="img-circle" width="200"height="200"><p align="center"><p></div>
-
-          <h1>"Lorem Ipsum is simply <span class="bigword">simply</span>"</h1>
-          <p> Lorem Ipsum is simply</p>
-          <a href="about.html#reviews"><input type="button" class="btn btn-primary" value="Read more..."></a>
-
-
-        </div>
-
-        <div class="intro1">
-
-          <div class="guestimg right hidden-md hidden-sm hidden-xs left"><img src="img/guest1.jpg" class="img-circle" width="200"height="200"><p align="center"><p></div>
-
-          <h1>"Lorem Ipsum is simply <span class="bigword">simply</span>"</h1>
-          <p> Lorem Ipsum is simply</p>
-          <a href="about.html#reviews"><input type="button" class="btn btn-primary" value="Read more..."></a>
-
-
-
-        </div>
-
-        <div class="intro1">
-
-          <div class="guestimg right hidden-md hidden-sm hidden-xs left"><img src="img/guest3.jpg" class="img-circle" width="200"height="200"><p align="center"></p></div>
-          <h1>"Lorem Ipsum is simply <span class="bigword">simply</span>"</h1>
-          <p> Lorem Ipsum is simply</p>
-          <a href="about.html#reviews"><input type="button" class="btn btn-primary" value="Read more..."></a>
-
-
-        </div>
-
-        <div class="intro1">
-
-          <div class="guestimg right hidden-md hidden-sm hidden-xs left"><img src="img/guest4.jpg" class="img-circle" width="200"height="200"><p align="center"><p></div>
-
-          <h1>"Lorem Ipsum is simply <span class="bigword">simply</span>"</h1>
-          <p> Lorem Ipsum is simply</p>
-          <a href="about.html#reviews"><input type="button" class="btn btn-primary" value="Read more..."></a>
-
-
-        </div>
-      </div>
-    </div>
-    <!--end intro div-->
 
     <!--start news div-->
     <div class="col-lg-3 hidden-md hidden-sm hidden-xs news">
@@ -204,12 +182,6 @@
 
     </div>
     <!--end news div-->
-
-    <div class="fixed-div col-lg-12 hidden-md hidden-sm hidden-xs">
-
-    </div>
-
-
 
     <!--start Links div-->
     <div class="col-lg-4 col-md-6 hidden-sm hidden-xs links">
@@ -241,12 +213,9 @@
           <td>
             <ul>
               <li>Sign up for newsletter</li>
-
               <form action="emaillist.php" method="POST">
                 <li><input type="email" placeholder="Enter your email" name="emailid" required><input type="submit" value="Send"></li>
               </form>
-
-              <br>
               <li>Get in Touch</li>
             </ul>
             <ul class="social">
@@ -279,9 +248,11 @@
           <td>
             <ul>
 
+
               <li>No 54 Beach Road</li>
               <li>Colombo 10</li>
               <li>Sri Lanka</li>
+
 
 
           </td>
