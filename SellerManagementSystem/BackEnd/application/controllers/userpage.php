@@ -668,7 +668,7 @@
 
 <!--start Bottom div-->
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bottom">
-	<p>&nbsp;&copy;&nbsp;Golden Island Hotel 2017 All Riights Reserved</p>
+	<p>&nbsp;&copy;&nbsp;Global Traders 2018 All Riights Reserved</p>
 </div>
 <!--end Bottom div-->
 </div>
