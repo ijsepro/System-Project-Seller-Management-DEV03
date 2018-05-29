@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="./../dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../dist/css/bootstrap.css">
   <link rel="stylesheet" href="adminpros.component.scss">
 
   <!--Jquery & slideshow-->
-  <script src="../../jquery/jquery-3.2.1.js"></script>
+  <script src="../jquery/jquery-3.2.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
 
-  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="icon" type="image/png" href="../img/logo.png" />
   <title>Global Traders</title>
 
 
@@ -56,17 +56,17 @@
 <!--Collapsible navbar for xs, sm, & md sizes only-->
 <div class="menubar hidden-lg" data-toggle="collapse" data-target=".dropdown">
   <h3>MENU</h3>
-  <img src="img/btn-white.png" width="40" height="40" class="btnn">
+  <img src="../img/btn-white.png" width="40" height="40" class="btnn">
 </div>
 
 <div class="dropdown collapse out">
   <ul>
-    <a href="index.html"><li>Home</li></a>
-    <a href="about.html"><li>About us</li></a>
-    <a href="rates.html"><li>Rates</li></a>
-    <a href="facilities.html"><li>Facilities</li></a>
-    <a href="gallery.html"><li>Gallery</li></a>
-    <a href="contact.html"><li>Contact</li></a>
+    <a href="../../../index.html"><li>Home</li></a>
+    <a href="../about/about.component.html"><li>About us</li></a>
+    <a href="../rates/rates.component.html"><li>Rates</li></a>
+    <a href="../facilities/facilities.component.html"><li>Facilities</li></a>
+    <a href="../gallery/gallery.component.html"><li>Gallery</li></a>
+    <a href="../contact/contact.component.html"><li>Contact</li></a>
   </ul>
 </div>
 <!--end Collapsible navbar-->
@@ -78,9 +78,9 @@
 
     <!--start Logo div-->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 logo text-center">
-      <p class="btn btn-primary right"><a href="login.php">Logout</a></p>
+      <p class="btn btn-primary right"><a href="../../../../../BackEnd/application/views/login.php">Logout</a></p>
 
-      <img src="img/logo.png" width="100" height="auto" id="logo">
+      <img src="../img/logo.png" width="100" height="auto" id="logo">
     </div>
     <!--end Logo div-->
 
@@ -93,12 +93,12 @@
       <!--start editor div-->
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 editor event">
         <div class="collapsebtn" data-toggle="collapse" data-target=".collapsediv6"><h3>New User</h3>
-          <img src="img/btn-white.png" width="40" height="40">
+          <img src="../img/btn-white.png" width="40" height="40">
         </div>
         <div class="collapsediv6 team collapse out">
 
           <table border="0" width="95%" height="95%" align="center">
-            <form action="adduser.php" method="POST">
+            <form action="../../../../../BackEnd/application/controllers/adduser.php" method="POST">
               <tr>
                 <td>
                   <p>Username</p>
@@ -134,12 +134,12 @@
 			<!--start editor div-->
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 editor event">
         <div class="collapsebtn" data-toggle="collapse" data-target=".collapsediv5"><h3>Update Users</h3>
-          <img src="img/btn-white.png" width="40" height="40">
+          <img src="../img/btn-white.png" width="40" height="40">
         </div>
         <div class="collapsediv5 team collapse out">
 
           <table border="0" width="95%" height="95%" align="center">
-            <form action="updateuser.php" method="POST">
+            <form action="../../../../../BackEnd/application/controllers/updateuser.php" method="POST">
               <tr>
                 <td>
                   <p>Username</p>
@@ -176,13 +176,13 @@
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 editor event">
         <div class="collapsebtn" data-toggle="collapse" data-target=".collapsediv19"><h3>New Seller</h3>
-          <img src="img/btn-white.png" width="40" height="40">
+          <img src="../img/btn-white.png" width="40" height="40">
         </div>
         <div class="collapsediv19 team collapse out">
 
 
           <table border="0" width="95%" height="95%" align="center">
-            <form action="updateuser.php" method="POST">
+            <form action="../../../../../BackEnd/application/controllers/updateuser.php" method="POST">
               <tr>
                 <td>
                   <p>NIC</p>
@@ -254,13 +254,13 @@
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 editor event">
         <div class="collapsebtn" data-toggle="collapse" data-target=".collapsediv17"><h3>New Supplier</h3>
-          <img src="img/btn-white.png" width="40" height="40">
+          <img src="../img/btn-white.png" width="40" height="40">
         </div>
         <div class="collapsediv17 team collapse out">
 
 
           <table border="0" width="95%" height="95%" align="center">
-            <form action="updateuser.php" method="POST">
+            <form action="../../../../../BackEnd/application/controllers/updateuser.php" method="POST">
               <tr>
                 <td>
                   <p>Supplier NIC</p>
@@ -332,13 +332,13 @@
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 editor event">
         <div class="collapsebtn" data-toggle="collapse" data-target=".collapsediv16"><h3>New Place Order</h3>
-          <img src="img/btn-white.png" width="40" height="40">
+          <img src="../img/btn-white.png" width="40" height="40">
         </div>
         <div class="collapsediv16 team collapse out">
 
 
           <table border="0" width="95%" height="95%" align="center">
-            <form action="updateuser.php" method="POST">
+            <form action="../../../../../BackEnd/application/controllers/updateuser.php" method="POST">
               <tr>
                 <td>
                   <p>Order Id</p>
@@ -464,12 +464,12 @@
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 editor event">
         <div class="collapsebtn" data-toggle="collapse" data-target=".collapsediv9"><h3>New Customer</h3>
-          <img src="img/btn-white.png" width="40" height="40">
+          <img src="../img/btn-white.png" width="40" height="40">
         </div>
         <div class="collapsediv9 team collapse out">
 
           <table border="0" width="95%" height="95%" align="center">
-            <form action="addCustomer.php" method="POST">
+            <form action="../../../../../BackEnd/application/controllers/addCustomer.php" method="POST">
               <tr>
                 <td>
                   <p>Id</p>
@@ -530,7 +530,7 @@
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 editor event">
         <div class="collapsebtn" data-toggle="collapse" data-target=".collapsediv10"><h3>New Item</h3>
-          <img src="img/btn-white.png" width="40" height="40">
+          <img src="../img/btn-white.png" width="40" height="40">
         </div>
         <div class="collapsediv10 team collapse out">
 
@@ -602,12 +602,12 @@
       <!--start editor div-->
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 editor event">
         <div class="collapsebtn" data-toggle="collapse" data-target=".collapsediv7"><h3>Post a Job</h3>
-          <img src="img/btn-white.png" width="40" height="40">
+          <img src="../img/btn-white.png" width="40" height="40">
         </div>
         <div class="collapsediv7 team collapse out">
 
           <table border="0" width="95%" height="95%" align="center">
-            <form action="jobpost.php" method="POST">
+            <form action="../../../../../BackEnd/application/controllers/jobpost.php" method="POST">
               <tr>
                 <td>
                   <p>Position Name</p>
@@ -660,10 +660,10 @@
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 editor event">
         <div class="collapsebtn" data-toggle="collapse" data-target=".collapsediv1"><h3>View Emails</h3>
-          <img src="img/btn-white.png" width="40" height="40">
+          <img src="../img/btn-white.png" width="40" height="40">
         </div>
         <div class="collapsediv1 team collapse out">
-          <iframe width="100%" src="emailviewer.php"></iframe>
+          <iframe width="100%" src="../../../../../BackEnd/application/controllers/emailviewer.php"></iframe>
 
         </div>
       </div><!--end editor div-->
@@ -680,17 +680,17 @@
     <tr valign="top">
       <td>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="rates.html">Rates</a></li>
-          <li><a href="facililties.html">Facilities</a></li>
+          <li><a href="../../../index.html">Home</a></li>
+          <li><a href="../about/about.component.html">About us</a></li>
+          <li><a href="../rates/rates.component.html">Rates</a></li>
+          <li><a href="../facilities/facilities.component.html">Facilities</a></li>
       </td>
       <td>
         <ul>
 
-          <li><a href="gallery">Gallery</a></li>
-          <li><a href="contact.html">Contact us</a></li>
-          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="../gallery/gallery.component.html">Gallery</a></li>
+          <li><a href="../contact/contact.component.html">Contact us</a></li>
+
       </td>
     </tr>
   </table>
@@ -710,9 +710,9 @@
           <li>Get in Touch</li>
         </ul>
         <ul class="social">
-          <li><a href="http://www.facebook.com"><img src="img/fb.png" width="30" height="auto"></a></li>
-          <li><a href="http://www.twitter.com"><img src="img/tw.png" width="30" height="auto"></a></li>
-          <li><a href="http://www.tripadvisor.com"><img src="img/ta.png" width="30" height="auto"></a></li>
+          <li><a href="http://www.facebook.com"><img src="../img/fb.png" width="30" height="auto"></a></li>
+          <li><a href="http://www.twitter.com"><img src="../img/tw.png" width="30" height="auto"></a></li>
+          <li><a href="http://www.tripadvisor.com"><img src="../img/ta.png" width="30" height="auto"></a></li>
         </ul>
       </td>
     </tr>

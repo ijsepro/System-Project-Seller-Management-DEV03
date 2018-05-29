@@ -6,33 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="./../dist/css/bootstrap.css">
-  <link rel="stylesheet" href="contact.component.scss">
+  <link rel="stylesheet" href="../dist/css/bootstrap.css">
+  <link rel="stylesheet" href="gallery.component.scss">
 
   <!--Jquery & slideshow-->
-  <script src="../../jquery/jquery-3.2.1.js"></script>
+  <script src="../jquery/jquery-3.2.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
 
-  <link rel="icon" type="image/png" href="img/logo.png" />
-  <title>Global Traders | Contact</title>
+  <link rel="icon" type="image/png" href="../img/logo.png" />
+  <title>Global Traders | Gallery</title>
 
-  <script>
-    function phonenumber(inputtxt)
-    {
-      var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-      if(inputtxt.value.match(phoneno))
-      {
-        return true;
-      }
-      else
-      {
-        alert("Not a valid Phone Number");
-        return false;
-      }
+  <style>
+    #preview{
+      width: 100%;
+      height: auto;
+      box-shadow: 0px 0px 200px;
+      padding: 10px;
     }
 
-
-  </script>
+  </style>
 
 </head>
 
@@ -44,17 +36,17 @@
 <!--Collapsible navbar for xs, sm, & md sizes only-->
 <div class="menubar hidden-lg" data-toggle="collapse" data-target=".dropdown">
   <h3>MENU</h3>
-  <img src="img/btn-white.png" width="40" height="40" class="btnn">
+  <img src="../img/btn-white.png" width="40" height="40" class="btnn">
 </div>
 
 <div class="dropdown collapse out">
   <ul>
-    <a href="index.html"><li>Home</li></a>
-    <a href="about.html"><li>About us</li></a>
-    <a href="rates.html"><li>Rates</li></a>
-    <a href="facilities.html"><li>Facilities</li></a>
-    <a href="gallery.html"><li>Gallery</li></a>
-    <a href="contact.html"><li>Contact</li></a>
+    <a href="../../../index.html"><li>Home</li></a>
+    <a href="../about/about.component.html"><li>About us</li></a>
+    <a href="../rates/rates.component.html"><li>Rates</li></a>
+    <a href="../facilities/facilities.component.html"><li>Facilities</li></a>
+    <a href="gallery.component.html"><li>Gallery</li></a>
+    <a href="../contact/contact.component.html"><li>Contact</li></a>
   </ul>
 </div>
 <!--end Collapsible navbar-->
@@ -67,109 +59,96 @@
     <!--start Logo div-->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 logo text-center">
       <p class="btn btn-primary right"><a href="login.php">Login</a></p>
-      <img src="img/logo.png" width="100" height="auto" id="logo">
+      <img src="../img/logo.png" width="100" height="auto" id="logo">
     </div>
     <!--end Logo div-->
 
     <!--start Header div-->
     <div class="col-lg-12 hidden-md hidden-sm hidden-xs header text-center">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About us</a></li>
-        <li><a href="rates.html">Rates</a></li>
-        <li><a href="facilities.html">Facilities</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="../../../index.html">Home</a></li>
+        <li><a href="../about/about.component.html">About us</a></li>
+        <li><a href="../rates/rates.component.html">Rates</a></li>
+        <li><a href="../facilities/facilities.component.html">Facilities</a></li>
+        <li><a href="gallery.component.html">Gallery</a></li>
+        <li><a href="../contact/contact.component.html">Contact</a></li>
       </ul>
     </div>
     <!--end Header div-->
 
     <!--start contact1 div-->
-    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 contact1">
-      <table border="0" width="80%" height="80%" align="center">
-        <tr valign="top">
+
+    <!--end contact1 div-->
+
+    <!--start facilities div-->
+    <div class="viewer" col-lg-8 col-md-8 col-sm-10 col-xs-10>
+      <div>
+        <input type="button" class="btn btn-default" value="Close" id="close" onclick="close();">
+        <div id="preview"></div>
+      </div>
+
+    </div>
+    <div class="col-lg-9 col-md-6 col-sm-9 col-xs-12 gallery center-block">
+
+      <h1 class="text-center">Photo Gallery</h1>
+      <table border="0" class="phototable  center-block">
+        <tr>
           <td>
-            <ul>
-              <li>Email: <a href="mailto:#">info@globaltraders.com</a></li>
-              <li>Phone : +94 21 2245 665</li>
-              <li>Fax : +94 21 2245 665</li>
+
+
+            <img src="../img/gallery/1.jpg" width="100%" class="img" id="0" onclick="fn(this.id)" alt="image1">
+
+
+          </td>
+
+          <td>
+
+
+            <!--<img src="../img/gallery/2.jpg" width="100%" class="img" id="1" onclick="fn(this.id)" alt="image2">-->
+
+          </td>
+
+          <td>
+
+            <!--<img src="../img/gallery/3.jpg" width="100%" class="img" id="2" onclick="fn(this.id)" alt="image3">-->
+
+          </td>
+
+          <td>
+
+            <!--<img src="../img/gallery/4.jpg" width="100%" class="img" id="3" onclick="fn(this.id)" alt="image4">-->
 
           </td>
         </tr>
         <tr>
           <td>
-            <ul>
-              <li>Address:</li>
-              <li>No 54 Beach Road</li>
-              <li>Colombo 10</li>
-              <li>Sri Lanka</li>
 
+            <!--<img src="../img/gallery/5.jpg" width="100%" class="img" id="4" onclick="fn(this.id)" alt="image5">-->
+
+          </td>
+
+          <td>
+
+            <!--<img src="../img/gallery/6.jpg" width="100%" class="img" id="5" onclick="fn(this.id)" alt="image6">-->
+
+          </td>
+
+          <td>
+
+            <!--<img src="../img/gallery/7.jpg" width="100%" class="img" id="6" onclick="fn(this.id)" alt="image7">-->
+
+          </td>
+
+          <td>
+
+
+            <!--<img src="../img/gallery/8.jpg" width="100%" class="img" id="7" onclick="fn(this.id)" alt="image8">-->
 
           </td>
         </tr>
       </table>
-
     </div>
-    <!--end contact1 div-->
-
-    <!--start contact2 div-->
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contact2">
-
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7890.340179909945!2d81.23203741005541!3d8.579639264705593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afbbcb6902dbe27%3A0x7de76a7a331b0fbb!2sTrincomalee!5e0!3m2!1sen!2slk!4v1503716109993" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-      <br/><br/>
-      <h4>Send us a Message</h4>
-      <div class="contact_form">
-        <table border=0 width="100%" height="200">
-          <form method="POST" action="contact-form.php">
-            <tr>
-              <td>Name
-              </td>
-              <td><input type="text" name="msgname" id="#name"required>
-              </td>
-            </tr>
-            <tr>
-              <td>Email
-              </td>
-              <td><input type="email" name="msgemail" id="#emiail" required>
-              </td>
-            </tr>
-            <tr>
-              <td>Telephone
-              </td>
-              <td><input type="text" name="msgtel" id="#tel" required>
-              </td>
-            </tr>
-            <tr>
-              <td>Message
-              </td>
-              <td><textarea rows="3" cols="30" name="message" required>
-					</textarea>
-              </td>
-            </tr>
-            <tr>
-              <td>
-              </td>
-              <td><input type="submit" value="Send" id="btnadd">
-              </td>
-            </tr>
-          </form>
-        </table>
-        <hr>
-
-        <div class="join center-block">
-          <a href="careers.php">
-            <h4>Join our team</h4>
-          </a>
-        </div>
-
-
-
-
-
-      </div>
-    </div>
-    <!--end contact2 div-->
+    <!--end facilities div-->
 
     <!--start Book div-->
     <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 book right">
@@ -246,17 +225,17 @@
         <tr valign="top">
           <td>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About us</a></li>
-              <li><a href="rates.html">Rates</a></li>
-              <li><a href="facilities.html">Facilities</a></li>
+              <li><a href="../../../index.html">Home</a></li>
+              <li><a href="../about/about.component.html">About us</a></li>
+              <li><a href="../rates/rates.component.html">Rates</a></li>
+              <li><a href="../facilities/facilities.component.html">Facilities</a></li>
           </td>
           <td>
             <ul>
 
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="contact.html">Contact us</a></li>
-              <li><a href="sitemap.html">Sitemap</a></li>
+              <li><a href="gallery.component.html">Gallery</a></li>
+              <li><a href="../contact/contact.component.html">Contact us</a></li>
+
           </td>
         </tr>
       </table>
@@ -270,15 +249,15 @@
           <td>
             <ul>
               <li>Sign up for newsletter</li>
-              <form action="emaillist.php" method="POST">
+              <form action="../../../../../BackEnd/application/controllers/emaillist.php" method="POST">
                 <li><input type="email" placeholder="Enter your email" name="emailid" required><input type="submit" value="Send"></li>
               </form>
               <li>Get in Touch</li>
             </ul>
             <ul class="social">
-              <li><a href="http://www.facebook.com"><img src="img/fb.png" width="30" height="auto"></a></li>
-              <li><a href="http://www.twitter.com"><img src="img/tw.png" width="30" height="auto"></a></li>
-              <li><a href="http://www.tripadvisor.com"><img src="img/ta.png" width="30" height="auto"></a></li>
+              <li><a href="http://www.facebook.com"><img src="../img/fb.png" width="30" height="auto"></a></li>
+              <li><a href="http://www.twitter.com"><img src="../img/tw.png" width="30" height="auto"></a></li>
+              <li><a href="http://www.tripadvisor.com"><img src="../img/ta.png" width="30" height="auto"></a></li>
             </ul>
           </td>
         </tr>
@@ -324,11 +303,47 @@
   </div>
 </div>
 
+
+<script>	//photo viewer div opener
+$('#close').on('click',function(){
+  $('.viewer').hide();
+});
+
+$('.img').on('click',function(){
+  $('.viewer').show();
+});
+</script>
+
+<script>	//Photo gallery viewer
+function fn(clicked_id){
+
+  var image = new Array();
+
+  var i = clicked_id;
+
+
+  image[0] = '<img src="../img/gallery/1.jpg" width="500">';
+  image[1] = '<img src="../img/gallery/2.jpg" width="500">';
+  image[2] = '<img src="../img/gallery/3.jpg" width="500">';
+  image[3] = '<img src="../img/gallery/4.jpg" width="500">';
+  image[4] = '<img src="../img/gallery/5.jpg" width="500">';
+  image[5] = '<img src="../img/gallery/6.jpg" width="500">';
+  image[6] = '<img src="../img/gallery/7.jpg" width="500">';
+  image[7] = '<img src="../img/gallery/8.jpg" width="500">';
+
+  var y = image[i];
+
+  var x = document.getElementById('preview');
+  x.innerHTML = y;
+}
+
+</script>
+
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/HomeController.js"></script>
 </body>
 </html>

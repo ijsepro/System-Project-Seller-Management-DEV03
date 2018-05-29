@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../dist/css/bootstrap.css">
+  <link rel="stylesheet" href="trackSeller.component.scss">
 
   <!--Jquery & slideshow-->
-  <script src="jquery/jquery-3.2.1.js"></script>
+  <script src="../jquery/jquery-3.2.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
 
-  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="icon" type="image/png" href="../img/logo.png" />
   <title>Global Traders | Contact</title>
 
   <script>
@@ -44,17 +44,17 @@
 <!--Collapsible navbar for xs, sm, & md sizes only-->
 <div class="menubar hidden-lg" data-toggle="collapse" data-target=".dropdown">
   <h3>MENU</h3>
-  <img src="img/btn-white.png" width="40" height="40" class="btnn">
+  <img src="../img/btn-white.png" width="40" height="40" class="btnn">
 </div>
 
 <div class="dropdown collapse out">
   <ul>
-    <a href="index.html"><li>Home</li></a>
-    <a href="about.html"><li>About us</li></a>
-    <a href="rates.html"><li>Rates</li></a>
-    <a href="facilities.html"><li>Facilities</li></a>
-    <a href="gallery.html"><li>Gallery</li></a>
-    <a href="contact.html"><li>Contact</li></a>
+    <a href="../../../index.html"><li>Home</li></a>
+    <a href="../about/about.component.html"><li>About us</li></a>
+    <a href="../rates/rates.component.html"><li>Rates</li></a>
+    <a href="../facilities/facilities.component.html"><li>Facilities</li></a>
+    <a href="../gallery/gallery.component.html"><li>Gallery</li></a>
+    <a href="../contact/contact.component.html"><li>Contact</li></a>
   </ul>
 </div>
 <!--end Collapsible navbar-->
@@ -66,8 +66,8 @@
 
     <!--start Logo div-->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 logo text-center">
-      <p class="btn btn-primary right"><a href="login.php">Login</a></p>
-      <img src="img/logo.png" width="100" height="auto" id="logo">
+      <p class="btn btn-primary right"><a href="../../../../../BackEnd/application/views/login.php">Login</a></p>
+      <img src="../img/logo.png" width="100" height="auto" id="logo">
     </div>
     <!--end Logo div-->
 
@@ -202,17 +202,17 @@
         <tr valign="top">
           <td>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About us</a></li>
-              <li><a href="rates.html">Rates</a></li>
-              <li><a href="facilities.html">Facilities</a></li>
+              <li><a href="../../../index.html">Home</a></li>
+              <li><a href="../about/about.component.html">About us</a></li>
+              <li><a href="../rates/rates.component.html">Rates</a></li>
+              <li><a href="../facilities/facilities.component.html">Facilities</a></li>
           </td>
           <td>
             <ul>
 
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="contact.html">Contact us</a></li>
-              <li><a href="sitemap.html">Sitemap</a></li>
+              <li><a href="../gallery/gallery.component.html">Gallery</a></li>
+              <li><a href="../contact/contact.component.html">Contact us</a></li>
+
           </td>
         </tr>
       </table>
@@ -226,15 +226,15 @@
           <td>
             <ul>
               <li>Sign up for newsletter</li>
-              <form action="emaillist.php" method="POST">
+              <form action="../../../../../BackEnd/application/controllers/emaillist.php" method="POST">
                 <li><input type="email" placeholder="Enter your email" name="emailid" required><input type="submit" value="Send"></li>
               </form>
               <li>Get in Touch</li>
             </ul>
             <ul class="social">
-              <li><a href="http://www.facebook.com"><img src="img/fb.png" width="30" height="auto"></a></li>
-              <li><a href="http://www.twitter.com"><img src="img/tw.png" width="30" height="auto"></a></li>
-              <li><a href="http://www.tripadvisor.com"><img src="img/ta.png" width="30" height="auto"></a></li>
+              <li><a href="http://www.facebook.com"><img src="../img/fb.png" width="30" height="auto"></a></li>
+              <li><a href="http://www.twitter.com"><img src="../img/tw.png" width="30" height="auto"></a></li>
+              <li><a href="http://www.tripadvisor.com"><img src="../img/ta.png" width="30" height="auto"></a></li>
             </ul>
           </td>
         </tr>

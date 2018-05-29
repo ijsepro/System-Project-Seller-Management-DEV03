@@ -6,17 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="./../dist/css/bootstrap.css">
-  <link rel="stylesheet" href="facilities.component.scss">
+  <link rel="stylesheet" href="../dist/css/bootstrap.css">
+  <link rel="stylesheet" href="careers.component.scss">
 
   <!--Jquery & slideshow-->
-  <script src="../../jquery/jquery-3.2.1.js"></script>
+  <script src="../jquery/jquery-3.2.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
 
-  <link rel="icon" type="image/png" href="img/logo.png" />
-  <title>Global Traders | Facilities</title>
+  <link rel="icon" type="image/png" href="../img/logo.png" />
+  <title>Global Traders</title>
 
   <script>
+
 
 
   </script>
@@ -31,17 +32,17 @@
 <!--Collapsible navbar for xs, sm, & md sizes only-->
 <div class="menubar hidden-lg" data-toggle="collapse" data-target=".dropdown">
   <h3>MENU</h3>
-  <img src="img/btn-white.png" width="40" height="40" class="btnn">
+  <img src="../img/btn-white.png" width="40" height="40" class="btnn">
 </div>
 
 <div class="dropdown collapse out">
   <ul>
-    <a href="index.html"><li>Home</li></a>
-    <a href="about.html"><li>About us</li></a>
-    <a href="rates.html"><li>Rates</li></a>
-    <a href="facilities.html"><li>Facilities</li></a>
-    <a href="gallery.html"><li>Gallery</li></a>
-    <a href="contact.html"><li>Contact</li></a>
+    <a href="../../../index.html"><li>Home</li></a>
+    <a href="../about/about.component.html"><li>About us</li></a>
+    <a href="../rates/rates.component.html"><li>Rates</li></a>
+    <a href="../facilities/facilities.component.html"><li>Facilities</li></a>
+    <a href="../gallery/gallery.component.html"><li>Gallery</li></a>
+    <a href="../contact/contact.component.html"><li>Contact</li></a>
   </ul>
 </div>
 <!--end Collapsible navbar-->
@@ -53,20 +54,20 @@
 
     <!--start Logo div-->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 logo text-center">
-      <p class="btn btn-primary right"><a href="login.php">Login</a></p>
-      <img src="img/logo.png" width="100" height="auto" id="logo" alt="logo">
+      <p class="btn btn-primary right"><a href="../../../../../BackEnd/application/views/login.php">Login</a></p>
+      <img src="../img/logo.png" width="100" height="auto" id="logo">
     </div>
     <!--end Logo div-->
 
     <!--start Header div-->
     <div class="col-lg-12 hidden-md hidden-sm hidden-xs header text-center">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About us</a></li>
-        <li><a href="rates.html">Rates</a></li>
-        <li><a href="facilities.html">Facilities</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="../../../index.html">Home</a></li>
+        <li><a href="../about/about.component.html">About us</a></li>
+        <li><a href="../rates/rates.component.html">Rates</a></li>
+        <li><a href="../facilities/facilities.component.html">Facilities</a></li>
+        <li><a href="../gallery/gallery.component.html">Gallery</a></li>
+        <li><a href="../contact/contact.component.html">Contact</a></li>
       </ul>
     </div>
     <!--end Header div-->
@@ -75,37 +76,84 @@
 
     <!--end contact1 div-->
 
-    <!--start facilities div-->
-    <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12 facilities">
+    <!--start contact2 div-->
+    <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12 jobpage">
 
-      <h1>Our Facilities</h1>
-      <div class="team">
-        <table border="0">
-          <tr>
-            <td>
-              <ul>
 
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                <li>TLorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
 
-              </ul>
-            </td>
-          </tr>
-        </table>
-      </div>
+      <br/><br/>
+      <h3 class="text-center">Available Positions</h3><br>
+      <h5 class="text-center">Please send all your resumes with two non related refrees to email address
+        <a href="mailto:hr@goldenisland.com">hr@goldenisland.com</a><h5>
+          <div class="wrap col-lg-12">
 
+
+
+
+
+            <?php
+            include('/xampp/htdocs/SellerManagement/BackEnd/connection.php');
+
+            $sql = "SELECT * FROM careers";
+            $sqldata = mysqli_query($conn,$sql);
+
+
+            while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
+
+              echo "<br>";
+
+              echo '<div class="vacancy center-block">';
+              echo '<div class="title text-center"><h4 class="text-center">';
+              echo $row['title'];
+              echo '</h4></div>';
+              echo '<h4>Job Description</h4>';
+              echo '<p>';
+              echo $row['jobdesc'];
+              echo '</p>';
+
+              echo '<h4>Qualifications</h4>';
+              echo '<p>';
+              echo $row['qualifications1'];
+              echo '<br>';
+              echo $row['qualifications2'];
+              echo '<br>';
+              echo $row['qualifications3'];
+              echo '<br>';
+              echo $row['qualifications4'];
+              echo '<br>';
+              echo $row['qualifications5'];
+              echo '<br>';
+              echo '</p>';
+
+              echo '<h4>Closing Date : '.$row['closing'].'</h4>';
+
+
+              echo '</div>';
+
+            }
+
+
+            ?>
+
+
+
+
+
+
+
+
+
+
+          </div>
     </div>
-    <!--end facilities div-->
+    <!--end contact2 div-->
 
     <!--start Book div-->
     <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 book right">
 
 
       <table border="0" width="95%" height="95%" align="center">
-        <!--<form action="roomresults.php" method="POST">-->
+        <!--                    <form action="roomresults.php" method="POST">-->
         <tr>
           <td>
             <h3>Track your order</h3>
@@ -159,11 +207,11 @@
     <div class="col-lg-3 hidden-md hidden-sm hidden-xs news">
       <h3>News & Events</h3>
       <ul>
-        <li><a href="#">Loremndard dummy text ehe leap into electronic typesetting, remaining essentially unchanged.</a></li>
-        <li><a href="#">Loremndard dummy text ehe leap into electronic typesetting, remaining essentially unchanged.</a></li>
-        <li><a href="#">Loremndard dummy text ehe leap into electronic typesetting, remaining essentially unchanged</a></li>
-        <li><a href="#">Loremndard dummy text ehe leap into electronic typesetting, remaining essentially unchanged</a></li>
-        <li><a href="#">Loremndard dummy text ehe leap into electronic typesetting, remaining essentially unchanged</a></li>
+        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+        <li><a href="#">Aenean gravida ligula sed dignissim commodo. consectetur adipiscing elit.</a></li>
+        <li><a href="#">Integer lorem ipsum, scelerisque at rutrum eu,</a></li>
+        <li><a href="#">Aenean gravida ligula sed dignissim commodo. Morbi mattis.</a></li>
+        <li><a href="#">Morbi mattis non massa sed placerat.</a></li>
       </ul>
 
     </div>
@@ -175,17 +223,17 @@
         <tr valign="top">
           <td>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About us</a></li>
-              <li><a href="rates.html">Rates</a></li>
-              <li><a href="facilities.html">Facilities</a></li>
+              <li><a href="../../../index.html">Home</a></li>
+              <li><a href="../about/about.component.html">About us</a></li>
+              <li><a href="../rates/rates.component.html">Rates</a></li>
+              <li><a href="../facilities/facilities.component.html">Facilities</a></li>
           </td>
           <td>
             <ul>
 
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="contact.html">Contact us</a></li>
-              <li><a href="sitemap.html">Sitemap</a></li>
+              <li><a href="../gallery/gallery.component.html">Gallery</a></li>
+              <li><a href="../contact/contact.component.html">Contact us</a></li>
+
           </td>
         </tr>
       </table>
@@ -199,15 +247,15 @@
           <td>
             <ul>
               <li>Sign up for newsletter</li>
-              <form action="emaillist.php" method="POST">
-                <li><input type="email" placeholder="Enter your email" name="emailid" required><input type="submit" value="Send"></li>
+              <form action="../../../../../BackEnd/application/controllers/emaillist.php" method="POST">
+                <li><input type="email" placeholder="Enter your email" name="emailid"><input type="submit" value="Send"></li>
               </form>
               <li>Get in Touch</li>
             </ul>
             <ul class="social">
-              <li><a href="http://www.facebook.com"><img src="img/fb.png" width="30" height="auto"></a></li>
-              <li><a href="http://www.twitter.com"><img src="img/tw.png" width="30" height="auto"></a></li>
-              <li><a href="http://www.tripadvisor.com"><img src="img/ta.png" width="30" height="auto"></a></li>
+              <li><a href="http://www.facebook.com"><img src="../img/fb.png" width="30" height="auto"></a></li>
+              <li><a href="http://www.twitter.com"><img src="../img/tw.png" width="30" height="auto"></a></li>
+              <li><a href="http://www.tripadvisor.com"><img src="../img/ta.png" width="30" height="auto"></a></li>
             </ul>
           </td>
         </tr>
@@ -233,7 +281,6 @@
         <tr>
           <td>
             <ul>
-
 
               <li>No 54 Beach Road</li>
               <li>Colombo 10</li>
